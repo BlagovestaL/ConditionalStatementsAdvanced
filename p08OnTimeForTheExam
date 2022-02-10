@@ -1,0 +1,47 @@
+package ConditionalStatementsAdvanced.exe;
+
+import java.util.Scanner;
+
+public class p08OnTimeForTheExam {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int examHour = Integer.parseInt(scanner.nextLine());
+        int examMin = Integer.parseInt(scanner.nextLine());
+        int arriveHour = Integer.parseInt(scanner.nextLine());
+        int arriveMin = Integer.parseInt(scanner.nextLine());
+
+        int examTime = (examHour * 60) + examMin;
+        int arriveTime = (arriveHour * 60) + arriveMin;
+
+        int diff = Math.abs(examTime - arriveTime);
+
+        if (examTime < arriveTime){
+            System.out.println("Late");
+            if (diff >= 60) {
+                int hour = diff / 60;
+                int min = diff % 60;
+                System.out.printf("%d:%02d hours after the start", hour, min);
+            }else{
+                System.out.printf(diff + " minutes after the start");
+            }
+
+        }else if (examTime == arriveTime || (diff >= 1 && diff <= 30)){
+            System.out.println("On time");
+            if (diff>= 1 && diff <= 30){
+                System.out.printf(diff + " minutes before the start");
+            }
+
+        }else{
+            System.out.println("Early");
+            if (diff>=60){
+                int hour = diff / 60;
+                int min = diff % 60;
+                System.out.printf("%d:%02d hours before the start", hour, min);
+            } else {
+                System.out.printf(diff + " minutes before the start");
+            }
+        }
+
+    }
+}
