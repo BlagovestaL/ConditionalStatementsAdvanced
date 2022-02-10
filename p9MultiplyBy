@@ -1,0 +1,33 @@
+package ConditionalStatementsAdvanced.MoreEXE;
+
+import java.util.Scanner;
+
+public class p9MultiplyBy {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            double num1 = Double.parseDouble(scanner.nextLine());
+            double num2 = Double.parseDouble(scanner.nextLine());
+            double num3 = Double.parseDouble(scanner.nextLine());
+            double num4 = Double.parseDouble(scanner.nextLine());
+            double num5 = Double.parseDouble(scanner.nextLine());
+
+            if (num1 < 0 || num2 < 0 ) {
+                    System.out.println("Negative number!");
+                    break;
+                } else if (num1 % 2 == 0 || num2 % 2 == 0) {
+                    double result1 = num1 * 2;
+                    double result2 = num2 * 2;
+                    double result3 = num3 * 2;
+                    double result4 = num4 * 2;
+                    double result5 = num5 * 2;
+                    System.out.printf("Result: %.2f", result1);
+                    System.out.printf("Result: %.2f", result2);
+                    System.out.printf("Result: %.2f", result3);
+                    System.out.printf("Result: %.2f", result4);
+                    System.out.printf("Result: %.2f", result5);
+                }
+            }
+        }
+    }
