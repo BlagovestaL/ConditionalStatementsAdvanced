@@ -2,7 +2,7 @@ package ConditionalStatementsAdvanced.MoreEXE;
 
 import java.util.Scanner;
 
-public class p9MultiplyBy {
+public class p09MultiplyBy {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
