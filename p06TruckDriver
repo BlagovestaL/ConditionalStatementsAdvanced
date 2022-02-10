@@ -1,0 +1,55 @@
+package ConditionalStatementsAdvanced.MoreEXE;
+
+import java.util.Scanner;
+
+public class p06TruckDriver {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String season = scanner.nextLine();
+        int km = Integer.parseInt(scanner.nextLine());
+
+        double priceKm = 0;
+
+        switch (season){
+            case "Spring":
+            case "Autumn":
+                if (km <= 5000){
+                    priceKm = km * 0.75;
+                    System.out.printf("%.2f",(priceKm * 4) * 0.9);
+                }else if(km > 5000 && km <= 10000){
+                    priceKm = km * 0.95;
+                    System.out.printf("%.2f", (priceKm * 4) * 0.9);
+                }else if(km > 10000 && km <= 20000){
+                    priceKm = km * 1.45;
+                    System.out.printf("%.2f", (priceKm * 4) * 0.9);
+                }
+                break;
+            case "Summer":
+                if (km <= 5000){
+                    priceKm = km * 0.90;
+                    System.out.printf("%.2f",(priceKm * 4) * 0.9);
+                }else if(km > 5000 && km <= 10000){
+                    priceKm = km * 1.10;
+                    System.out.printf("%.2f", (priceKm * 4) * 0.9);
+                }else if(km > 10000 && km <= 20000){
+                    priceKm = km * 1.45;
+                    System.out.printf("%.2f", (priceKm * 4) * 0.9);
+                }
+                break;
+            case "Winter":
+                if (km <= 5000){
+                    priceKm = km * 1.05;
+                    System.out.printf("%.2f",(priceKm * 4) * 0.9);
+                }else if(km > 5000 && km <= 10000){
+                    priceKm = km * 1.25;
+                    System.out.printf("%.2f", (priceKm * 4) * 0.9);
+                }else if(km > 10000 && km <= 20000){
+                    priceKm = km * 1.45;
+                    System.out.printf("%.2f", (priceKm * 4) * 0.9);
+                }
+                break;
+        }
+
+    }
+}
