@@ -1,0 +1,32 @@
+package ConditionalStatementsAdvanced.MoreEXE;
+
+import java.util.Scanner;
+
+public class p02BikeRace {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int juniorsBicycler = Integer.parseInt(scanner.nextLine());
+        int seniorsBicycler = Integer.parseInt(scanner.nextLine());
+        String route = scanner.nextLine();
+
+        double juniorsPrice = 0;
+        double seniorsPrice = 0;
+        double total = 0;
+
+        if (route.equals("trail")) {
+            total = (juniorsBicycler * 5.50+seniorsBicycler * 7)*0.95;
+        } else if (route.equals("cross-country")) {
+            if(juniorsBicycler+seniorsBicycler>=50){
+                total = (juniorsBicycler * 8 + seniorsBicycler * 9.5)*0.75*0.95;
+        }else{
+                total = (juniorsBicycler * 8 + seniorsBicycler * 9.5)*0.95;
+            }
+        } else if (route.equals("downhill")) {
+            total = (juniorsBicycler * 12.25 + seniorsBicycler * 13.75)*0.95;
+        } else if (route.equals("road")) {
+            total = (juniorsBicycler * 20 + seniorsBicycler * 21.50)*0.95;
+        }
+            System.out.printf("%.2f",total);
+        }
+    }
