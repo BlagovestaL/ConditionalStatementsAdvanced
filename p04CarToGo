@@ -1,0 +1,46 @@
+package ConditionalStatementsAdvanced.MoreEXE;
+
+import java.util.Scanner;
+
+public class p04CarToGo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double budget = Double.parseDouble(scanner.nextLine());
+        String season = scanner.nextLine();
+
+        String clas = " ";
+
+        switch (season){
+            case "Summer":
+                if (budget<=100){
+                    clas = "Economy class";
+                    System.out.println(clas);
+                    System.out.printf("Cabrio - " + "%.2f" , budget*0.35);
+                } else if(budget>100 && budget<=500 ) {
+                    clas = "Compact class";
+                    System.out.println(clas);
+                    System.out.printf("Cabrio - " + "%.2f" , budget*0.45);
+                }else if(budget>500){
+                    clas = "Luxury class";
+                    System.out.println(clas);
+                    System.out.printf("Jeep - " + "%.2f" , budget*0.90);
+                }
+                break;
+            case "Winter":
+                if (budget<=100){
+                    clas = "Economy class";
+                    System.out.println(clas);
+                    System.out.printf("Jeep - " + "%.2f" , budget*0.65);
+                } else if(budget>100 && budget<=500 ) {
+                    clas = "Compact class";
+                    System.out.println(clas);
+                    System.out.printf("Jeep - " + "%.2f" , budget*0.80);
+                }else if(budget>500) {
+                    clas = "Luxury class";
+                    System.out.println(clas);
+                    System.out.printf("Jeep - " + "%.2f" , budget*0.90);
+                }break;
+        }
+    }
+}
